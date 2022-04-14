@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  system:
+    build:
+      context: ./centos
+    container_name: centos7
+    volumes:
+      - /Users/sy/Workspace/go:/root/workspace
+    ports:
+      - "8001:8001"
+    restart: always
+    tty: true
+    networks:
+      - base_env
+
+networks:
+  base_env:
+    external: true
