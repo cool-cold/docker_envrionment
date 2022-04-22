@@ -8,8 +8,3 @@ services:
       - "6379:6379" # 设置容器3306端口映射指定宿主机端口
     restart: always
 
-    networks:
-      - base_env
-networks:
-  base_env:
-    external: true
